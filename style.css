@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f4f4fc;
+}
+
+
+
+h1 > img{
+    width: 4%;
+    border-radius: 50%;
+    border: 2px solid #9090f8;
+    margin: 10px 0px 0px 20px;
+}
+
+.conteiner {
+    display: flex;
+    width: calc(100% - 40px);
+    margin: 20px;
+    gap: 50px;
+}
+
+/* Estilos para el contenedor de encriptar y desencriptar */
+.cointeiner-encrip,
+.conteiner-desencrip {
+    flex: 1; /* Ocúpan el mismo espacio */
+}
+
+/* Estilos para los textareas */
+.texto{
+    width: 800px;
+    height: 65vh;
+    background-color: #f4f4fc;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    line-height: 150%;
+    padding: 20px;
+    resize: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.texto::placeholder {
+    color: #0a3871;
+}
+
+.texto:focus, .msj:focus{
+    outline: none;
+
+}
+.msj{
+    width: 100%;
+    height: 84vh;
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    line-height: 150%;
+    padding: 20px;
+    resize: none;
+    border-radius: 20px;
+    border: 2px solid #c5c5f1;
+    box-shadow: 5px 5px 0px 0px rgba(197,197,241,0.5);
+}
+
+/*Estilo para el termino*/
+.terminos{
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #495057;
+    font-family: 'Inter', sans-serif;
+}
+
+.fa-exclamation-circle{
+    color: #0a3871;
+}
+
+/* Estilos para el botón */
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    width: 100%;
+    height: 10vh;
+    padding: 10px; 
+    margin-top: 10px; 
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+.btn-encriptar{
+    background-color: #0a3871;
+    color: #fff;
+}
+
+.btn-desencriptar{
+    color: #0a3871;
+    border: 2px solid #0a3871;
+    background-color: #f4f4fc;
+}
+
+.conteiner-msj{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.position{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -115%);
+}
+
+.btn-copiar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -140%);
+    width: 70%;
+    background-color: #f4f4fc;
+    border: 2px solid #c5c5f1;
+    color: #0a3871;
+    display: none;
+}
+
+.title-h2{
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.parrafo{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #495057;
+    margin-top: 10px;
+}
+
+@media (min-width:1367px){
+    .msj{
+        height: 82vh;
+    }
+
+    .position{
+        transform: translate(-50%, -140%);
+    }
+
+    .title-h2{
+        font-size: 30px;
+    }
+
+    .parrafo{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:1279px){
+    h1 img{
+        width: 8%;
+    }
+
+    .conteiner{
+        flex-direction: column;
+        width: auto;
+        gap: 30px;
+    }
+    
+    .texto{
+        width: 100%;
+    }
+
+    .msj{
+        height: 20vh;
+    }
+
+    .position{
+        width: 100%;
+        transform: translate(-50%, -200%);
+    }
+
+    .img{
+        display: none;
+    }
+
+    .title-h2{
+        font-size: 30px;
+    }
+
+    .parrafo{
+        font-size: 20px;
+    } 
+    
+}
+
+@media (max-width:667px){
+    h1 img{
+        width: 12%;
+    }
+    .conteiner{
+        width: auto;
+        gap: 30px;
+    }
+
+    .texto{
+        width: 100%;
+    }
+
+    .msj{
+        width: 100%;
+    }
+
+    .buttons{
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .terminos{
+        font-size: 18px;
+    }
+
+    .position{
+        transform: translate(-50%, -120%);
+    }
+
+    .title-h2{
+        font-size: 25px;
+    }
+}

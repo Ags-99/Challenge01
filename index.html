@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conteiner-title">
+        <h1><img src="img/unnamed (1).png" alt="Logo"></h1>
+    </div>
+    <div class="conteiner">
+        <div class="cointeiner-encrip">
+            <div class="encrip">
+                <textarea name="texto" id="texto" cols="30" rows="10" class="texto" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <div class="terminos">
+                <i class="fas fa-exclamation-circle"></i>
+                <p class="condicion">Solo letrras minúsculas y sín acentos</p>
+            </div>
+            <div class="buttons">
+                <button onclick="encriptar();" type="button" class="btn-encriptar">Encriptar</button>
+                <button onclick="desencriptar();" type="button" class="btn-desencriptar">Desencriptar</button>
+            </div>
+        </div>
+        <div class="conteiner-desencrip">
+            <div class="conteiner-descrip">
+            <textarea name="msj" id="msj" cols="30" rows="10" class="msj"></textarea>
+            </div>
+            <div class="conteiner-msj" id="conteiner-msj">
+                <div class="position" id="position">
+                    <img src="img/muñeco.png" alt="muñeco" class="img" >
+                    <h2 class="title-h2">Ningún mensaje fue encontrado</h2>
+                    <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <button onclick="copiarTexto()" type="button" class="btn-copiar" id="btn-copiar">Copiar</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
