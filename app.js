@@ -3,6 +3,10 @@ function encriptar() {
     let texto = document.getElementById("texto").value;
     let textoEncriptado = "";
 
+    if(texto === ""){
+        document.getElementById("position").style.display = "block";
+        document.getElementById("btn-copiar").style.display = "none";
+    }else{
     for (let i = 0; i < texto.length; i++) {
         if (texto === texto.toUpperCase() || texto[0] === texto[0].toUpperCase()) {
             if (texto[0] === texto[0].toUpperCase()) {
@@ -33,16 +37,10 @@ function encriptar() {
                 break;
         }
     }
-
-    document.getElementById("msj").value = textoEncriptado;
-      // Verificar si el ancho de la ventana es menor a 1279px
-    if (window.innerWidth < 1279) {
-        // Ajustar dinámicamente la altura del textarea msj según su contenido
-        document.getElementById("msj").style.height = '20px';
-        document.getElementById("msj").style.height = (document.getElementById("msj").scrollHeight) + 'px';
-    }
     document.getElementById("position").style.display = "none";
     document.getElementById("btn-copiar").style.display = "block";
+    document.getElementById("msj").value = textoEncriptado;
+    }
     console.log(textoEncriptado);
 }
 
@@ -52,6 +50,10 @@ function desencriptar() {
     let textoEncriptado = document.getElementById("texto").value;
     let textoDesencriptado = "";
 
+    if(textoEncriptado === ""){
+        document.getElementById("position").style.display = "block";
+        document.getElementById("btn-copiar").style.display = "none";
+    }else{
     for (let i = 0; i < textoEncriptado.length; i++) {
         if (textoEncriptado[i] === "a" && textoEncriptado[i + 1] === "i") {
             textoDesencriptado += "a";
@@ -73,14 +75,9 @@ function desencriptar() {
         }
     }
     document.getElementById("msj").value = textoDesencriptado;
-      // Verificar si el ancho de la ventana es menor a 1279px
-    if (window.innerWidth < 1279) {
-        // Ajustar dinámicamente la altura del textarea msj según su contenido
-        document.getElementById("msj").style.height = '20px';
-        document.getElementById("msj").style.height = (document.getElementById("msj").scrollHeight) + 'px';
-    }
     document.getElementById("position").style.display = "none";
     document.getElementById("btn-copiar").style.display = "block";
+    }
     console.log(textoDesencriptado);
 }
 

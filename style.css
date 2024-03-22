@@ -187,12 +187,13 @@ button {
     }
 
     .msj{
-        height: 20vh;
+        height: 30vh;
     }
 
     .position{
+        position: absolute;
         width: 100%;
-        transform: translate(-50%, -200%);
+        transform: translate(-50%, -280%);
     }
 
     .img{
@@ -236,7 +237,7 @@ button {
     }
 
     .position{
-        transform: translate(-50%, -120%);
+        transform: translate(-50%, -150%);
     }
 
     .title-h2{
