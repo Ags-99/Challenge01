@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="conteiner-title">
         <h1><img src="img/unnamed (1).png" alt="Logo"></h1>
+        <i class="fa-solid fa-caret-down" id="fa-caret-down" onclick="aparecerDesaparecer();"></i>
+        <i class="fa-solid fa-circle-xmark" id="fa-circle-xmark" onclick="aparecerDesaparecer();"></i>
+        <div class="conteiner-caja">
+            <div class="caja" id="caja">
+                <div class="historial">
+                    <h2>Historial</h2>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="conteiner">
         <div class="cointeiner-encrip">
             <div class="encrip">
-                <textarea name="texto" id="texto" cols="30" rows="10" class="texto" placeholder="Ingrese el texto aquí"></textarea>
+                <textarea name="texto" id="texto" cols="30" rows="10" class="texto"
+                    placeholder="Ingrese el texto aquí"></textarea>
             </div>
             <div class="terminos">
                 <i class="fas fa-exclamation-circle"></i>
@@ -27,11 +39,11 @@
         </div>
         <div class="conteiner-desencrip">
             <div class="conteiner-descrip">
-            <textarea name="msj" id="msj" cols="30" rows="10" class="msj"></textarea>
+                <textarea name="msj" id="msj" cols="30" rows="10" class="msj"></textarea>
             </div>
             <div class="conteiner-msj" id="conteiner-msj">
                 <div class="position" id="position">
-                    <img src="img/muñeco.png" alt="muñeco" class="img" >
+                    <img src="img/muñeco.png" alt="muñeco" class="img">
                     <h2 class="title-h2">Ningún mensaje fue encontrado</h2>
                     <p class="parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
@@ -41,4 +53,5 @@
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
